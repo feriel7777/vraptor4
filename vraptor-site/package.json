@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+  "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+  },
   "author": "Sr. Saude",
   "license": "MIT",
   "devDependencies": {
@@ -26,7 +29,4 @@
     "grunt-shell": "~0.6.4",
     "grunt-contrib-concat" : "~0.4.0"
   }
-  "scripts": {
-  "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
-},
 }
