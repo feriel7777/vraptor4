@@ -6,9 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "scripts": {
-  "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
-  },
   "author": "Sr. Saude",
   "license": "MIT",
   "devDependencies": {
