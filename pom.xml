@@ -108,11 +108,11 @@
 		<developerConnection>scm:git:git@github.com:caelum/vraptor4.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<modules>
 		<module>vraptor-core</module>
 	</modules>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -159,8 +159,6 @@
 					</targetTests>
 				</configuration>
 			</plugin>
-						
-					
 	   </plugins>
 	</build>
 </project>
