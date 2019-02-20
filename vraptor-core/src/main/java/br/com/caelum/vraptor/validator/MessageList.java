@@ -15,7 +15,6 @@
  */
 package br.com.caelum.vraptor.validator;
 
-import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -35,9 +34,7 @@ import com.google.common.collect.ForwardingList;
  * @author Otávio Scherer Garcia
  */
 @Vetoed
-public class MessageList extends ForwardingList<Message> implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class MessageList extends ForwardingList<Message> {
 
 	private final List<Message> delegate;
 	private Map<String, Collection<Message>> grouped;
