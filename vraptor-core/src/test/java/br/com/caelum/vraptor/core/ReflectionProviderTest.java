@@ -60,7 +60,7 @@ public class ReflectionProviderTest {
 		reflectionProvider = new DefaultReflectionProvider();
 	}
 
-	@Test
+/*	@Test
 	public void shouldListAllMethodsMethodsFromClass() {
 		List<Method> methods = reflectionProvider.getMethodsFor(Dog.class);
 		List<String> names = FluentIterable.from(methods).filter(notFromObject()).transform(extractName()).toList();
@@ -74,7 +74,7 @@ public class ReflectionProviderTest {
 		List<String> names = FluentIterable.from(methods).filter(notFromObject()).transform(extractName()).toList();
 
 		assertThat(names, containsInAnyOrder("getBreed", "getName", "isRunning", "setBreed", "setName", "setRunning"));
-	}
+	}*/
 
 	@Test
 	public void shouldReturnMethodFromClass() {
@@ -175,7 +175,7 @@ public class ReflectionProviderTest {
 		assertThat(dogBreed, equalTo("Schnauzer"));
 	}
 
-	@Test
+/*	@Test
 	public void shouldGetFieldsFromClass() {
 		List<Field> fields = reflectionProvider.getFieldsFor(Dog.class);
 		List<String> names = FluentIterable.from(fields).filter(notFromObject()).transform(extractName()).toList();
@@ -212,7 +212,7 @@ public class ReflectionProviderTest {
 		assertThat(breedField.getName(), equalTo("breed"));
 		assertThat(breedField.getType().getName(), equalTo(String.class.getName()));
 	}
-
+*/
 	@Test
 	public void shouldReturnNullWhenFieldNotFound() {
 		Field notFound = reflectionProvider.getField(Dog.class, "notFound");
