@@ -128,37 +128,40 @@
 				</dependencies>
 			</plugin>
 			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven_plugin</artifactId>
-				<version>0.8.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>jacoco-report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.pitest</groupId>
-				<artifactId>pitest-maven</artifactId>
-				<version>1.2.5</version>
-				<configuration>
-					<targetClasses>
-						<param>com.caelum.vraptor.*</param>
-					</targetClasses>
-					<targetTests>
-						<param>com.caelum.vraptor.*</param>
-					</targetTests>
-				</configuration>
-			</plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.2</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>prepare-agent</goal>
+					</goals>
+				</execution>
+				<!-- attached to Maven test phase -->
+				<execution>
+					<id>report</id>
+					<phase>test</phase>
+					<goals>
+						<goal>report</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+		<groupId>org.pitest</groupId>
+		<artifactId>pitest-maven</artifactId>
+		<version>1.4.3</version>
+		<executions>
+			<execution>
+				<id>pit-report</id>
+				<!-- optional, this example attached the goal into mvn test phase -->
+				<phase>test</phase>
+				<goals>
+					<goal>mutationCoverage</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
 	   </plugins>
 	</build>
 </project>
