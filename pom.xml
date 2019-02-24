@@ -161,6 +161,9 @@
 				</goals>
 			</execution>
 		</executions>
+		<configuration>
+			<outputFormats> XML </outputFormats>
+		</configuration>
 	</plugin>
 	   </plugins>
 	</build>
